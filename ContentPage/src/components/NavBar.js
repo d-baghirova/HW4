@@ -1,11 +1,11 @@
 import React from 'react'
 import { StyleSheet, View, Text } from 'react-native'
 
-const NavBar = () => {
+const NavBar = ({title}) => {
   return (
     <View style={styles.container}>
         <Text style={styles.link}>Back</Text>
-        <Text style={styles.heading}>Content</Text>
+        <Text style={styles.heading}>{title}</Text>
         <Text style={styles.link}>Filter</Text>
     </View>
   )

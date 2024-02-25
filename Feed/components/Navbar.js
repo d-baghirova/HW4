@@ -1,14 +1,14 @@
 import React from "react";
 import { StyleSheet, Text, View, Pressable } from "react-native";
 
-const Navbar = () => {
+const NavBar = ({title}) => {
   return (
     <View>
       <View style={styles.container}>
         <Pressable>
           <Text style={styles.back}>Back</Text>
         </Pressable>
-        <Text style={styles.market}>Feed</Text>
+        <Text style={styles.market}>{title}</Text>
         <Pressable>
           <Text style={styles.filter}>Filter</Text>
         </Pressable>
@@ -17,7 +17,7 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavBar;
 
 const styles = StyleSheet.create({
   container: {
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     padding: 10,
-    marginTop: 20,
+    marginTop: 30,
   },
   back: {
     fontSize: 18,

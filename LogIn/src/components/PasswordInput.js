@@ -22,10 +22,6 @@ const PasswordInput = () => {
       >
         <Text style={styles.green}>{showPassword ? 'Hide' : 'Show'}</Text>
       </Pressable>
-      {/* You can add an eye icon/button to toggle password visibility */}
-      {/* For better user experience */}
-      {/* Example: */}
-      {/* <Icon name={hidePass ? 'eye-off' : 'eye'} onPress={() => setHidePass(!hidePass)} /> */}
     </View>
   );
 };

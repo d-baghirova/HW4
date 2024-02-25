@@ -1,29 +1,30 @@
 import { StatusBar } from "expo-status-bar";
 import { ScrollView, StyleSheet, Text, View, ImageBackground, FlatList, SafeAreaView } from "react-native";
 import Search from "./components/Search";
-import Navbar from "./components/Navbar";
+import Layout from "./components/Layout";
 import Pages from "./components/Pages";
 import List from "./components/List";
 import Block from "./components/Block";
 
-const image = {uri: 'https://images.unsplash.com/photo-1638132035918-90a22beaab3b?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'};
+const image = {uri: "https://images.unsplash.com/photo-1638132035918-90a22beaab3b?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"};
 
 export default function App() {
-  return ( 
-    <View style={styles.container}>
-    <ImageBackground source={image} style={styles.container}>
-      <View style={styles.header}>
-        <Navbar />
-        <Search />
-        <StatusBar style="auto" />
+  return (  
+    <Layout title="Feed">
+      <View style={styles.container}>
+          <ImageBackground source={image} style={styles.container}>
+            <View style={styles.header}>
+              <Search />
+              <StatusBar style="auto" />
+            </View>
+              <List />
+              <Block />
+            <View style={styles.footer}> 
+              <Pages />
+            </View>
+          </ImageBackground>
       </View>
-        <List />
-        <Block />
-      <View style={styles.footer}>
-        <Pages />
-      </View>
-    </ImageBackground>
-    </View>
+    </Layout>
   );
 }
 

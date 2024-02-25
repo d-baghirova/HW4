@@ -6,15 +6,13 @@ import Pages from "./components/Pages";
 import List from "./components/List";
 import Trending from "./components/Trending";
 import HotDeals from "./components/HotDeals";
+import Layout from "./components/Layout";
 
 export default function App() {
   return (
+    <Layout title="Market">
     <View style={styles.container}>
-      <View style={styles.header}>
-        <Navbar />
-        <Search />
-        <StatusBar style="auto" />
-      </View>
+      <Search />
 
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.sector}>
@@ -37,7 +35,9 @@ export default function App() {
       <View style={styles.footer}>
         <Pages />
       </View>
+      <StatusBar style="auto" />
     </View>
+    </Layout>
   );
 }
 

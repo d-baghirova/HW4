@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, ScrollView } from 'react-native';
-import NavBar from './src/components/NavBar';
+import Layout from './src/components/Layout';
 import SearchBar from './src/components/SearchBar';
 import Block from './src/components/Block';
 
@@ -18,14 +18,15 @@ export default function App() {
   }
 
   return (
-    <View style={styles.container}>
-      <NavBar />
-      <SearchBar />
-      <ScrollView  showsVerticalScrollIndicator={false}>
-        {drawImages()}
-      </ScrollView>
-      <StatusBar style="auto" />
-    </View>
+    <Layout title="Content">
+      <View style={styles.container}>
+        <SearchBar />
+        <ScrollView  showsVerticalScrollIndicator={false}>
+          {drawImages()}
+        </ScrollView>
+        <StatusBar style="auto" />
+      </View>
+    </Layout>
   );
 }
 
