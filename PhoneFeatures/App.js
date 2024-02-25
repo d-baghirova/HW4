@@ -1,13 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import LogIn from './src/components/LogIn';
-import Navbar from './src/components/Navbar';
+import Dimentions from './src/components/Dimentions';
+import Link from './src/components/Link';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Navbar />
-      <LogIn />
+      <Dimentions />
+      <Link />
       <StatusBar style="auto" />
     </View>
   );
